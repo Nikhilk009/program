@@ -10,7 +10,8 @@ public class Practice {
        for(int i=0;i<a.length;i++){
            int flag=0;
            for(int j=0;j<a.length-1-i;j++){
-               if(a[j].compareTo(a[j+1])>0){
+               if(a[j].compareTo(a[j+1])>0){ 
+//for shorting compare string use the method of ().compareTo()>0
                    String temp=a[j];
                    a[j]=a[j+1];
                    a[j+1]=temp;
