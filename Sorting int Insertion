@@ -1,0 +1,30 @@
+ort java.util.Scanner;
+public class Practice {
+    public static void main(String []args) {
+        Scanner sc = new Scanner(System.in);
+        int z,temp,flag;
+        int a[]=new int[sc.nextInt()];
+        for (int i = 0; i <a.length;i++){
+            a[i]=sc.nextInt();
+        }
+        for (int i=0;i<a.length;i++){
+            z=i;
+            for(int j=i+1;(j>0)&&(j<a.length);j--){
+                flag=0;
+                if(a[j]< a[z]){
+                    temp=a[j];
+                    a[j]=a[z];
+                    a[z]=temp;
+                    z--;   flag=1;
+                }
+                if(flag==0){
+                    break;
+                }
+            }
+        }
+        System.out.println("shorted list");
+        for(int i=0;i<a.length;i++) {
+            System.out.println(a[i]);
+        }
+    }
+}
